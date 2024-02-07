@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teches",
+  "info": {
+    "singularName": "tech",
+    "pluralName": "teches",
+    "displayName": "Tech",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tipologia": {
+      "type": "string"
+    },
+    "Servicio": {
+      "type": "string"
+    },
+    "Cliente": {
+      "type": "string"
+    },
+    "Estatus": {
+      "type": "string"
+    },
+    "Dimensiones": {
+      "type": "string"
+    },
+    "Ubicacion": {
+      "type": "string"
+    },
+    "Ano": {
+      "type": "string"
+    },
+    "imgDiagrama": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
