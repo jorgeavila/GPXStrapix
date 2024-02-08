@@ -850,12 +850,25 @@ export interface ApiEstructuraEstructura extends Schema.CollectionType {
     singularName: 'estructura';
     pluralName: 'estructuras';
     displayName: 'Estructura';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Title: Attribute.String;
+    Description: Attribute.RichText;
+    img: Attribute.Media;
+    Tipologia: Attribute.String;
+    Servicio: Attribute.String;
+    Cliente: Attribute.String;
+    Estatus: Attribute.String;
+    Dimensiones: Attribute.String;
+    Ubicacion: Attribute.String;
+    Ano: Attribute.String;
+    images: Attribute.Media;
+    Video: Attribute.Media;
+    imgDiagrama: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

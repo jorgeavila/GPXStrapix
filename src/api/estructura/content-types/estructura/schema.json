@@ -4,7 +4,8 @@
   "info": {
     "singularName": "estructura",
     "pluralName": "estructuras",
-    "displayName": "Estructura"
+    "displayName": "Estructura",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,62 @@
   "attributes": {
     "Title": {
       "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tipologia": {
+      "type": "string"
+    },
+    "Servicio": {
+      "type": "string"
+    },
+    "Cliente": {
+      "type": "string"
+    },
+    "Estatus": {
+      "type": "string"
+    },
+    "Dimensiones": {
+      "type": "string"
+    },
+    "Ubicacion": {
+      "type": "string"
+    },
+    "Ano": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "imgDiagrama": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
