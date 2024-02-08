@@ -887,6 +887,41 @@ export interface ApiEstructuraEstructura extends Schema.CollectionType {
   };
 }
 
+export interface ApiMepMep extends Schema.CollectionType {
+  collectionName: 'meps';
+  info: {
+    singularName: 'mep';
+    pluralName: 'meps';
+    displayName: 'Mep';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.RichText;
+    img: Attribute.Media;
+    Tipologia: Attribute.String;
+    Servicio: Attribute.String;
+    Cliente: Attribute.String;
+    Estatus: Attribute.String;
+    Dimensiones: Attribute.String;
+    Ubicacion: Attribute.String;
+    Ano: Attribute.String;
+    images: Attribute.Media;
+    imgDiagrama: Attribute.Media;
+    Video: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::mep.mep', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::mep.mep', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTechTech extends Schema.CollectionType {
   collectionName: 'teches';
   info: {
@@ -943,6 +978,7 @@ declare module '@strapi/types' {
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
       'api::estructura.estructura': ApiEstructuraEstructura;
+      'api::mep.mep': ApiMepMep;
       'api::tech.tech': ApiTechTech;
     }
   }
