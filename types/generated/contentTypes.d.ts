@@ -965,6 +965,49 @@ export interface ApiMepMep extends Schema.CollectionType {
   };
 }
 
+export interface ApiRestaResta extends Schema.CollectionType {
+  collectionName: 'restas';
+  info: {
+    singularName: 'resta';
+    pluralName: 'restas';
+    displayName: 'Resta';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.RichText;
+    img: Attribute.Media;
+    Tipologia: Attribute.String;
+    Servicio: Attribute.String;
+    Cliente: Attribute.String;
+    Estatus: Attribute.String;
+    Dimensiones: Attribute.String;
+    Ubicacion: Attribute.String;
+    Ano: Attribute.String;
+    images: Attribute.Media;
+    imgDiagrama: Attribute.Media;
+    Video: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::resta.resta',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::resta.resta',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTechTech extends Schema.CollectionType {
   collectionName: 'teches';
   info: {
@@ -1023,6 +1066,7 @@ declare module '@strapi/types' {
       'api::estructura.estructura': ApiEstructuraEstructura;
       'api::mapei.mapei': ApiMapeiMapei;
       'api::mep.mep': ApiMepMep;
+      'api::resta.resta': ApiRestaResta;
       'api::tech.tech': ApiTechTech;
     }
   }
