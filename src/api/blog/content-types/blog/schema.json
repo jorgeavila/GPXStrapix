@@ -4,7 +4,7 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "Blog",
+    "displayName": "Arquitectura",
     "description": ""
   },
   "options": {
@@ -48,25 +48,28 @@
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "imgDiagrama": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "categories": {
       "type": "relation",
