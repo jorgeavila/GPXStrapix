@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estructuras",
+  "info": {
+    "singularName": "estructura",
+    "pluralName": "estructuras",
+    "displayName": "Estructura"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

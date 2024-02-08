@@ -844,6 +844,36 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiEstructuraEstructura extends Schema.CollectionType {
+  collectionName: 'estructuras';
+  info: {
+    singularName: 'estructura';
+    pluralName: 'estructuras';
+    displayName: 'Estructura';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::estructura.estructura',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::estructura.estructura',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTechTech extends Schema.CollectionType {
   collectionName: 'teches';
   info: {
@@ -899,6 +929,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
+      'api::estructura.estructura': ApiEstructuraEstructura;
       'api::tech.tech': ApiTechTech;
     }
   }
