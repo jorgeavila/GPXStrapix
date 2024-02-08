@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mapeis",
+  "info": {
+    "singularName": "mapei",
+    "pluralName": "mapeis",
+    "displayName": "Mapei",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tipologia": {
+      "type": "string"
+    },
+    "Servicio": {
+      "type": "string"
+    },
+    "Cliente": {
+      "type": "string"
+    },
+    "Estatus": {
+      "type": "string"
+    },
+    "Dimensiones": {
+      "type": "string"
+    },
+    "Ubicacion": {
+      "type": "string"
+    },
+    "Ano": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Video": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "imgDiagrama": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
