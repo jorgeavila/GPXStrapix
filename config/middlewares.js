@@ -14,7 +14,10 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  'strapi::cors': {
+  enable: true,
+  origin: ['https://gp-xpagina-f-inaltest.vercel.app'
+           },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
